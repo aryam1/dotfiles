@@ -1,0 +1,25 @@
+-- ~/.config/nvim/init.lua
+-- Minimal config — flesh out later
+
+-- Basic options
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.wrap = false
+vim.opt.termguicolors = true
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.updatetime = 50
+vim.opt.clipboard = "unnamedplus"
+
+-- Leader key
+vim.g.mapleader = " "
+
+-- Basic keymaps
+vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")

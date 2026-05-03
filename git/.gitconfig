@@ -1,0 +1,9 @@
+[core]
+	autocrlf = input
+[user]
+	email = GIT_EMAIL
+	name = GIT_NAME
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
