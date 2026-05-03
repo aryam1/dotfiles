@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DOTFILES_REPO="https://github.com/aryam1/dotfiles"
+DOTFILES_REPO="https://github.com/yourusername/dotfiles"
 DOTFILES_DIR="$HOME/.dotfiles"
 
 # ── Detect OS ──────────────────────────────────────────────────────────────────
@@ -68,7 +68,7 @@ clone_dotfiles() {
 apply_stow() {
     echo "→ Applying symlinks via stow"
     cd "$DOTFILES_DIR"
-    for pkg in fish git nvim; do
+    for pkg in fish git nvim tmux; do
         stow --restow --target="$HOME" "$pkg"
         echo "  ✓ $pkg"
     done
