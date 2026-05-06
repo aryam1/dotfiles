@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DOTFILES_REPO="https://github.com/yourusername/dotfiles"
+DOTFILES_REPO="https://github.com/aryam1/dotfiles"
 DOTFILES_DIR="$HOME/.dotfiles"
 
 # ── Detect OS ──────────────────────────────────────────────────────────────────
