@@ -28,7 +28,12 @@ if command -q zoxide
 end
  
 # Aliases
-alias cat 'bat --pager=never'
+if command -q batcat; and not command -q bat # For Ubuntu
+    alias cat 'batcat --pager=never'
+    alias bat 'batcat'
+else
+    alias cat 'bat --pager=never'
+end
 alias ga 'git add'
 alias gc 'git commit -m'
 alias gp 'git push'

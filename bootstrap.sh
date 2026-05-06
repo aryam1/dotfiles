@@ -12,20 +12,16 @@ install_packages() {
             fish fzf zoxide eza neovim git stow \
             tmux uv gcc gdb valgrind unzip \
             fastfetch ttf-jetbrains-mono ttf-meslo-nerd \
-            bat ripgrep fd
+            bat ripgrep fd btop
     elif command -v apt &>/dev/null; then
         echo "→ Debian/Ubuntu detected"
         sudo apt update
         sudo apt install -y \
             fish fzf zoxide eza neovim git stow \
             tmux unzip gcc gdb valgrind build-essential \
-            bat ripgrep fd-find
+            fastfetch bat ripgrep fd-find btop
         # uv — not in apt, install via official script
         curl -LsSf https://astral.sh/uv/install.sh | sh
-        # fastfetch — not in apt on older Ubuntu, install from release
-        FASTFETCH_VER="2.62.1"
-        curl -fsSL "https://github.com/fastfetch-cli/fastfetch/releases/download/${FASTFETCH_VER}/fastfetch-linux-amd64.deb" -o /tmp/fastfetch.deb
-        sudo dpkg -i /tmp/fastfetch.deb && rm /tmp/fastfetch.deb
     else
         echo "Unsupported package manager. Install packages manually." >&2
         exit 1
