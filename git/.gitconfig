@@ -1,8 +1,9 @@
 [core]
-	autocrlf = input
+    autocrlf = input
+    editor = nvim
 [user]
-	email = GIT_EMAIL
-	name = GIT_NAME
+	email = arya.mukherjee@hotmail.com
+	name = Arya Mukherjee
 [credential]
 	helper = store
 [init]

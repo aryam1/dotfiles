@@ -26,6 +26,8 @@ install_packages() {
         echo "Unsupported package manager. Install packages manually." >&2
         exit 1
     fi
+    # Quick Install Dust
+    curl -sSfL https://raw.githubusercontent.com/bootandy/dust/refs/heads/master/install.sh | sh
 }
 
 # ── Oh-my-posh (non-WSL only) ──────────────────────────────────────────────────
