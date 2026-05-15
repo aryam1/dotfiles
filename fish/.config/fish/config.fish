@@ -21,7 +21,11 @@ if command -q oh-my-posh; and test -f "$themesPath/current.txt"
     set themePath $themesPath/$currentTheme
     oh-my-posh init fish --config $themePath | source
 end
- 
+
+if command -q tmux; and not set -q TMUX
+    tmux attach-session -t main 2>/dev/null; or tmux new-session -s main
+end
+
 # Zoxide
 if command -q zoxide
     zoxide init --cmd cd fish | source
