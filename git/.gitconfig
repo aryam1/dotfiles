@@ -1,10 +1,11 @@
 [core]
     autocrlf = input
     editor = nvim
+    eol = lf
 [user]
-	email = arya.mukherjee@hotmail.com
-	name = Arya Mukherjee
+    email = arya.mukherjee@hotmail.com
+    name = Arya Mukherjee
 [credential]
-	helper = store
+    helper = store
 [init]
-	defaultBranch = main
+    defaultBranch = main
