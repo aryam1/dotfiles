@@ -20,6 +20,14 @@ vim.g.mapleader = " "
 
 -- Basic keymaps
 vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>W", ":wq<CR>")
+vim.keymap.set("n", "<leader>Q", ":q!<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+
+-- Plugins
+require("config.lazy")
+
+vim.cmd.colorscheme "catppuccin"
