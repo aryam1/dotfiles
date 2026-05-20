@@ -86,7 +86,7 @@ configure_git() {
 
 # ── Default shell ──────────────────────────────────────────────────────────────
 set_fish_default() {
-    if [ "$SHELL" != "$(which fish)" ]; then
+    if [ "$(realpath $SHELL)" != "$(realpath $(which fish))" ]; then
         echo "→ Setting fish as default shell"
         command -v fish | sudo tee -a /etc/shells
         chsh -s "$(which fish)"
