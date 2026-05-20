@@ -7,9 +7,8 @@ set -x EDITOR nvim
 # Detect environment
 if grep -qi microsoft /proc/version 2>/dev/null
     set -gx IS_WSL true
-    # Dynamically resolve Windows username
-    set -gx WIN_USER (cmd.exe /c "echo %USERNAME%" 2>/dev/null | string trim)
-    set -gx themesPath /mnt/c/Users/$WIN_USER/AppData/Local/Programs/oh-my-posh/themes
+    # Find theme folder path from whichever user has the folder
+    set -gx themesPath /mnt/c/Users/*/AppData/Local/Programs/oh-my-posh/themes
 else
     set -gx IS_WSL false
     set -gx themesPath $HOME/.config/oh-my-posh/themes
