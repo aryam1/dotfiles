@@ -28,6 +28,9 @@ install_packages() {
     fi
     # Quick Install Dust
     curl -sSfL https://raw.githubusercontent.com/bootandy/dust/refs/heads/master/install.sh | sh
+    # Install Tmux Plugin Manager
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 }
 
 # ── Oh-my-posh (non-WSL only) ──────────────────────────────────────────────────
