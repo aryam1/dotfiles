@@ -30,4 +30,4 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- Plugins
 require("config.lazy")
 
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "catppuccin-mocha"

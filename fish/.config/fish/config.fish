@@ -42,3 +42,4 @@ alias gc 'git commit -m'
 alias gp 'git push'
 alias gst 'git status'
 alias nv 'nvim'
+
