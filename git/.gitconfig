@@ -2,6 +2,7 @@
     autocrlf = input
     editor = nvim
     eol = lf
+    pager = delta
 [user]
     email = arya.mukherjee@hotmail.com
     name = Arya Mukherjee
@@ -9,3 +10,8 @@
     helper = store
 [init]
     defaultBranch = main
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    side-by-side = true

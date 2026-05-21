@@ -12,14 +12,14 @@ install_packages() {
             fish fzf zoxide eza neovim git stow \
             tmux uv gcc gdb valgrind unzip \
             fastfetch ttf-jetbrains-mono ttf-meslo-nerd \
-            bat ripgrep fd btop
+            bat ripgrep fd btop git-delta
     elif command -v apt &>/dev/null; then
         echo "→ Debian/Ubuntu detected"
         sudo apt update
         sudo apt install -y \
             fish fzf zoxide eza neovim git stow \
             tmux unzip gcc gdb valgrind build-essential \
-            fastfetch bat ripgrep fd-find btop
+            fastfetch bat ripgrep fd-find btop git-delta
         # uv — not in apt, install via official script
         curl -LsSf https://astral.sh/uv/install.sh | sh
     else
