@@ -26,8 +26,11 @@ install_packages() {
         echo "Unsupported package manager. Install packages manually." >&2
         exit 1
     fi
-    # Quick Install Dust
+    # Quick Install Dust (disk usage cli)
     curl -sSfL https://raw.githubusercontent.com/bootandy/dust/refs/heads/master/install.sh | sh
+    # Quick Install darya (disk usage tui with treemap)
+    curl -fsSL https://mr.katebzadeh.xyz/tools/darya/install | bash
+
     # Install Tmux Plugin Manager
     if [ ! -d ~/.tmux/plugins/tpm ]; then
         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
