@@ -21,10 +21,6 @@ if command -q oh-my-posh; and test -f "$themesPath/current.txt"
     oh-my-posh init fish --config $themePath | source
 end
 
-if command -q tmux; and not set -q TMUX
-    tmux attach-session -t main 2>/dev/null; or tmux new-session -s main
-end
-
 # Zoxide
 if command -q zoxide
     zoxide init --cmd cd fish | source
@@ -37,6 +33,7 @@ if command -q batcat; and not command -q bat # For Ubuntu
 else
     alias cat 'bat --pager=never'
 end
+
 alias ga 'git add'
 alias gc 'git commit -m'
 alias gp 'git push'
@@ -44,3 +41,4 @@ alias gu 'git pull'
 alias gs 'git status'
 alias nv 'nvim'
 
+alias t 'tmux'
