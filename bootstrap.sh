@@ -74,7 +74,7 @@ clone_dotfiles() {
 apply_stow() {
     echo "→ Applying symlinks via stow"
     cd "$DOTFILES_DIR"
-    for pkg in fish git nvim tmux; do
+    for pkg in fish git nvim tmux eza; do
         stow --restow --target="$HOME" "$pkg"
         echo "  ✓ $pkg"
     done
