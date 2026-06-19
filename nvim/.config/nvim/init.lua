@@ -1,6 +1,9 @@
 -- ~/.config/nvim/init.lua
 -- Minimal config — flesh out later
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Basic options
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -14,9 +17,6 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 vim.opt.clipboard = "unnamedplus"
-
-vim.g.loaded_netrwPlugin = 1
-vim.g.loaded_netrw = 1
 
 -- Leader key
 vim.g.mapleader = " "
@@ -33,4 +33,3 @@ vim.keymap.set("n", "<leader>n", ":Neotree filesystem toggle right<CR>",{})
 -- Plugins
 require("config.lazy")
 
-vim.cmd.colorscheme "catppuccin-mocha"
