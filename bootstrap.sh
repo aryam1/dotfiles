@@ -12,7 +12,7 @@ install_packages() {
             fish fzf zoxide eza neovim git stow \
             tmux uv gcc gdb valgrind unzip \
             fastfetch ttf-jetbrains-mono ttf-meslo-nerd \
-            bat ripgrep fd btop git-delta keychain
+            bat ripgrep fd btop git-delta keychain libsecret
     elif command -v apt &>/dev/null; then
         echo "→ Debian/Ubuntu detected"
         sudo apt update
