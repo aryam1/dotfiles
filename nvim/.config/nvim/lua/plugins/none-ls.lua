@@ -1,6 +1,6 @@
 return {
     "nvimtools/none-ls.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "mason.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim", "mason.nvim", "nvimtools/none-ls-extras.nvim"},
     config = function()
         local null_ls = require("null-ls")
 
@@ -17,7 +17,7 @@ return {
 
                 -- TS/JS/web
                 null_ls.builtins.formatting.prettier,
-                null_ls.builtins.diagnostics.eslint_d,
+                require("none-ls.diagnostics.eslint_d"),
 
                 -- Shell
                 null_ls.builtins.formatting.shfmt,

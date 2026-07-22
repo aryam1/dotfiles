@@ -17,6 +17,8 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 vim.opt.clipboard = "unnamedplus"
+vim.diagnostic.config({ virtual_text = true })
+
 
 -- Leader key
 vim.g.mapleader = " "
