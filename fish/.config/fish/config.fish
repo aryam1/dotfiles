@@ -42,3 +42,6 @@ alias gs 'git status'
 alias nv 'nvim'
 
 alias t 'tmux'
+
+# opencode
+fish_add_path /home/arya/.opencode/bin
