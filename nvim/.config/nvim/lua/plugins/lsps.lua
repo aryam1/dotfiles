@@ -41,5 +41,19 @@ return {
             { "mason-org/mason.nvim", opts = {} },
             "neovim/nvim-lspconfig",
         },
+        config = function(_, opts)
+            require("mason-lspconfig").setup(opts)
+
+            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities.textDocument.foldingRange = {
+                dynamicRegistration = false,
+                lineFoldingOnly = true,
+            }
+
+            -- adds folding to all lsps
+            vim.lsp.config('*', {
+                capabilities = capabilities,
+            })
+        end,
     }
 }
