@@ -6,9 +6,9 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Basic options
 vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.foldcolumn = "auto"
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
@@ -35,6 +35,16 @@ vim.keymap.set("n", "<leader>n", ":Neotree filesystem toggle right<CR>", {})
 
 vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {})
+-- visual mode: format only the selected range
+vim.keymap.set("v", "<leader>f", function()
+  vim.lsp.buf.format({
+    range = {
+      ["start"] = vim.api.nvim_buf_get_mark(0, "<"),
+      ["end"] = vim.api.nvim_buf_get_mark(0, ">"),
+    },
+  })
+end, {})
+
 
 -- Plugins
 require("config.lazy")
