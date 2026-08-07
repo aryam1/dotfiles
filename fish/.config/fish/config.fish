@@ -43,5 +43,7 @@ alias nv 'nvim'
 
 alias t 'tmux'
 
+alias m4b='docker run -it --rm -u $(id -u):$(id -g) -v "$(pwd)":/mnt sandreas/m4b-tool:latest'
+
 # opencode
 fish_add_path /home/arya/.opencode/bin
